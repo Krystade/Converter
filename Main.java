@@ -2,59 +2,48 @@
  * @input  user chooses one of two options
  * @output different 
  * @logic  the user chooses one of two options to decide their path the user also has some 
- *         of their choices chosen for them by calculating their stats and random numbers 
- * @author Jack Schmid
+ *         of their choices chosen for them by calculating their stats and random numbers
  * @date   8/--/2016
  */
 import java.util.Scanner;
 public class ConvertToDecimalToBinaryToHexa {
-public static void main(String[] args){
-  Scanner input = new Scanner(System.in);
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
  
-  System.out.print("Enter what you want to convert from,(decimal,binary,hexa) : ");
-  String from = input.next();
-  System.out.print("Enter what you want to convert to,(decimal,binary,hexa) : ");
-  String to = input.next();
-  System.out.print("Enter the number you want to convert: ");
-  int fromNum = input.nextInt();
-      if (from == "decimal"){
-        if (to == "binary"){
-            System.out.println("from " + from + " to " + to);
-        }else if (to == "hexa"){
-            System.out.println("from " + from + " to " + to);
-        }
-      }
-      
-      
-      if (from == "binary"){
-          if (to == "decimal"){
-            System.out.println("from " + from + " to " + to);
-        }else if (to == "hexa"){
-            System.out.println("from " + from + " to " + to);
-        }
-      }
-      
-      
-      if (from == "hexa"){
-          if(to == "decimal"){
-            System.out.println("from " + from + " to " + to);
-            } else if (to == "binary"){
-            System.out.println("from " + from + " to " + to);
+        System.out.print("Enter what you want to convert from,(decimal,binary,hexa) : ");
+        String from = input.next();
+        System.out.print("Enter what you want to convert to,(decimal,binary,hexa) : ");
+        String to = input.next();
+        System.out.print("Enter the number you want to convert: ");
+        int fromNum = input.nextInt();
+            if ("decimal".equals(from)){
+                if ("binary".equals(to)){
+                    System.out.println("from " + from + " to " + to);
+                }else if ("hexa".equals(to)){
+                    System.out.println("from " + from + " to " + to);
+                }
             }
+      
+      
+            if ("binary".equals(from)){
+                if ("decimal".equals(to)){
+                    System.out.println("from " + from + " to " + to);
+                }else if ("hexa".equals(to)){
+                    System.out.println("from " + from + " to " + to);
+                }
+            }
+      
+      
+            if ("hexa".equals(from)){
+                if("decimal".equals(to)){
+                 System.out.println("from " + from + " to " + to);
+                } else if ("binary".equals(to)){
+                    System.out.println("from " + from + " to " + to);
+                }
+            }
+            System.out.println("End");
         }
-        System.out.println("End");
     }
-}
-
-
-
-
-
-
-
-
-
-
 /* System.out.print("Enter what you want to convert from,(decimal,binary,hexa) : ");
   String from = input.next();
   System.out.print("Enter what you want to convert to,(decimal,binary,hexa) : ");
