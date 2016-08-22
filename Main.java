@@ -1,9 +1,8 @@
 /**
- * @input  user chooses one of two options
- * @output different 
- * @logic  the user chooses one of two options to decide their path the user also has some 
- *         of their choices chosen for them by calculating their stats and random numbers
- * @date   8/--/2016
+ * @input  user chooses what to convert from and what to convert to
+ * @output number in decimal,binary, or hexadecimal 
+ * @logic  the user chooses what to convert from and what to convert to in decimal,binary, or hexadecimal
+ * @date   8/23/2016
  */
 import java.util.Scanner;
 public class ConvertToDecimalToBinaryToHexa {
