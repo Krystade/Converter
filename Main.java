@@ -1,20 +1,30 @@
-/**
- * @input  user chooses what to convert from and what to convert to
- * @output number in decimal,binary, or hexadecimal 
- * @logic  the user chooses what to convert from and what to convert to in decimal,binary, or hexadecimal
- * @date   8/23/2016
- */
 import java.util.Scanner;
-public class ConvertToDecimalToBinaryToHexa {
+public class Converter {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
- 
         System.out.print("Enter what you want to convert from,(decimal,binary,hexa) : ");
         String from = input.next();
-        System.out.print("Enter what you want to convert to,(decimal,binary,hexa) : ");
+        switch(from){
+            case "decimal":
+                System.out.print("Enter what you want to convert to,(binary or hexa) : ");
+                break;
+            case "binary":
+                System.out.print("Enter what you want to convert to,(decimal or hexa) : ");
+                break;
+            case "hexa":
+                System.out.print("Enter what you want to convert to,(decimal or binary) : ");
+                break;
+        }
         String to = input.next();
+        String fromNumber = "";
+        int fromNum = 0;
+        if (from == "hexa"){
         System.out.print("Enter the number you want to convert: ");
-        long fromNum = input.nextLong();
+        fromNumber = input.next();
+        }else{
+        System.out.print("Enter the number you want to convert: ");
+        fromNum = input.nextInt();
+        }
             if ("decimal".equals(from)){
                 if ("binary".equals(to)){
                     String binary = "";
@@ -107,21 +117,26 @@ public class ConvertToDecimalToBinaryToHexa {
             }
             if ("binary".equals(from)){
                 if ("decimal".equals(to)){
+                    int decimal = 0;
+                    int p = 0;
+                    while(true){
+                        if(fromNum == 0){
+                          break;
+                        }else {
+                            int temp = fromNum % 10;
+                            decimal += temp*Math.pow(2, p);
+                            fromNum = fromNum/10;
+                            p++;
+                        }
+                    }
+                    System.out.println(decimal);
                     
-                    
-                    
-                    
-                    
-                }else if ("hexa".equals(to)){
-                    
-                    
-                    
+                   }else if ("hexa".equals(to)){
                     
                     
                 }
             }
-      
-      
+        
             if ("hexa".equals(from)){
                 if("decimal".equals(to)){
 
